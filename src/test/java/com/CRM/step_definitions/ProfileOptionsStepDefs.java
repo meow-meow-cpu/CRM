@@ -18,7 +18,6 @@ public class ProfileOptionsStepDefs extends BasePage {
         List<String> actualOptions = new ArrayList<>();
         for (WebElement each : actualOptionsAsWebElement) {
             actualOptions.add(each.getText());
-            System.out.println(each.getText());
         }
         Assert.assertTrue(expectedOptions.containsAll(actualOptions));
     }
