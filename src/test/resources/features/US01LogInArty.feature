@@ -1,6 +1,9 @@
 
 Feature: Log In
 
+  #Background: user is logged in
+   # Given that user is logged in as "helpdesk"
+    #possible usertypes: helpdesk, humanResources, marketing
 
   Scenario Outline: User should be able to log in with valid credentials
     Given user is on the login page

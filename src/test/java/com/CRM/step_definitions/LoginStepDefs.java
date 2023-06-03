@@ -46,4 +46,14 @@ public class LoginStepDefs extends LoginPage {
 
         Assert.assertEquals(errorText.getText(), "Incorrect login or password");
     }
+
+    @Given("that user is logged in")
+    public void thatUserIsLoggedIn() {
+
+    }
+
+    @Given("that user is logged in as {string}")
+    public void thatUserIsLoggedInAs(String userType) {
+        login(userType);
+    }
 }
