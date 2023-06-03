@@ -17,4 +17,7 @@ public class LoginPage extends BasePage{
 
     @FindBy(className = "errortext")
     public WebElement errorText;
+
+    @FindBy(id="USER_REMEMBER")
+    public WebElement checkbox;
 }

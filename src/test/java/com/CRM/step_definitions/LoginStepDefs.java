@@ -46,4 +46,9 @@ public class LoginStepDefs extends LoginPage {
 
         Assert.assertEquals(errorText.getText(), "Incorrect login or password");
     }
+
+    @Then("user clicks on the Remember me on this computer checkbox")
+    public void userClicksOnTheRememberMeOnThisComputerCheckbox() {
+        checkbox.click();
+    }
 }
