@@ -56,4 +56,6 @@ public class LoginStepDefs extends LoginPage {
     public void thatUserIsLoggedInAs(String userType) {
         login(userType);
     }
+
+
 }
