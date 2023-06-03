@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
         },
         features = "src/test/resources/features",
         glue = "com/CRM/step_definitions",
-        dryRun = true,
+        dryRun = false,
         tags = "",
         publish = false
 
