@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
         features = "src/test/resources/features",
         glue = "com/CRM/step_definitions",
         dryRun = false,
-        tags = "",
+        tags = "@us03",
         publish = false
 
 )
