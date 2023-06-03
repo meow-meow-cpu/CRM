@@ -9,9 +9,17 @@ public class BasePage {
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-@FindBy(id = "user-name")
+
+    @FindBy(id = "user-name")
     public WebElement profile;
 
-@FindBy(className = "menu-popup-item-text")
+    @FindBy(className = "menu-popup-item-text")
     public WebElement logout;
+
+    @FindBy(xpath = "//*[@class='menu-popup-item-text']")
+    public WebElement profileOptions;
+
+
 }
+
+

@@ -29,15 +29,27 @@ public class LoginPage extends BasePage{
             case "helpdesk":
                username="helpdesk45@cybertekschool.com";
                password="UserUser";
+                usernameField.sendKeys(username);
+                passwordField.sendKeys(password);
+                loginButton.click();
+                break;
             case "humanResource":
                 username="hr45@cybertekschool.com";
                 password="UserUser";
+                usernameField.sendKeys(username);
+                passwordField.sendKeys(password);
+                loginButton.click();
+                break;
             case "marketing":
                 username="marketing45@cybertekschool.com";
                 password="UserUser";
+                usernameField.sendKeys(username);
+                passwordField.sendKeys(password);
+                loginButton.click();
+                break;
         }
-        usernameField.sendKeys(username);
-        passwordField.sendKeys(password);
-        loginButton.click();
+//        usernameField.sendKeys(username);
+//        passwordField.sendKeys(password);
+//        loginButton.click();
     }
 }

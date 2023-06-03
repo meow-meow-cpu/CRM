@@ -1,7 +1,8 @@
 Feature: As a user, I should be able to log out from the CRM app.
 
 Background: user is logged in
-  Given that user is logged in as "helpdesk"
+  Given user is on the login page
+  And that user is logged in as "helpdesk"
     #possible usertypes: helpdesk, humanResources, marketing
 
   @us03
