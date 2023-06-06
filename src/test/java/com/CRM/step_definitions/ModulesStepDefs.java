@@ -57,19 +57,21 @@ public class ModulesStepDefs extends ChatAndCallsPage {
         for (String eachModule : allModulesActual) {
             Driver.getDriver().findElement(By.xpath("//a/span[contains(text(), '" + eachModule + "')]")).click();
 
-
+            System.out.println(Driver.getDriver().getTitle());
 
             if (Driver.getDriver().getTitle().contains("Chat and Calls")){
-
+                System.out.println(Driver.getDriver().getTitle());
                 //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
                 //wait.until(ExpectedConditions.elementToBeClickable(closeButton));
-                closeButton.click();
+                //closeButton.click();
 
                 //Actions actions = new Actions(Driver.getDriver());
                 //actions.moveToElement(closeButton).click().build().perform();
 
                 Driver.getDriver().navigate().back();
             }
+
+            actualTitles.add(eachModule);
         }
 
         System.out.println("actualTitles = " + actualTitles);
