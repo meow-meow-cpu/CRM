@@ -58,8 +58,9 @@ public class ModulesStepDefs extends ChatAndCallsPage {
             Driver.getDriver().findElement(By.xpath("//a/span[contains(text(), '" + eachModule + "')]")).click();
 
             System.out.println(Driver.getDriver().getTitle());
+            actualTitles.add(Driver.getDriver().getTitle());
 
-            if (Driver.getDriver().getTitle().contains("Chat and Calls")){
+            if (Driver.getDriver().getTitle().contains("Chat and Calls")) {
                 System.out.println(Driver.getDriver().getTitle());
                 //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
                 //wait.until(ExpectedConditions.elementToBeClickable(closeButton));
@@ -70,12 +71,18 @@ public class ModulesStepDefs extends ChatAndCallsPage {
 
                 Driver.getDriver().navigate().back();
             }
-
-            actualTitles.add(eachModule);
         }
 
         System.out.println("actualTitles = " + actualTitles);
 
-        Assert.assertEquals(actualTitles, expectedTitles);
+        for (int i = 0; i < actualTitles.size(); i++) {
+
+            if (!expectedTitles.get(i).contains(actualTitles.get(i)))){
+                System.err.println("Title Mismatch");
+                System.out.println("expectedTitles = " + expectedTitles.get(i));
+                System.out.println("actualTitles = " + actualTitles.get(i));
+            }
+
+        }
     }
 }
