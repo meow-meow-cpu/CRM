@@ -77,7 +77,7 @@ public class ModulesStepDefs extends ChatAndCallsPage {
 
         for (int i = 0; i < actualTitles.size(); i++) {
 
-            if (!expectedTitles.get(i).contains(actualTitles.get(i)))){
+            if (!actualTitles.get(i).contains(expectedTitles.get(i))){
                 System.err.println("Title Mismatch");
                 System.out.println("expectedTitles = " + expectedTitles.get(i));
                 System.out.println("actualTitles = " + actualTitles.get(i));

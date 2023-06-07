@@ -28,6 +28,7 @@ Feature: As a user, I should be able to access the correct modules.
       | Workgroups and projects |
       | Site map                |
       | Site map                |
+      | Mailbox Integration     |
       | Contact Center          |
       | Absence Chart           |
       | Company Structure       |
